@@ -1,35 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="landing-3 default-style">
 
   <head>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
+
+  <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
     <meta name="author" content="">
 
-    <title>Creative - Start Bootstrap Theme</title>
+    <title>EverPay - Open Payments </title>
 
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/bootstrap.css" class="theme-settings-bootstrap-css">
 
     <!-- Custom fonts for this template -->
+   <link href="vendor/fonts/ionicons.css" rel="stylesheet" type="text/css">
+   <link href="vendor/fonts/linearicons.css" rel="stylesheet" type="text/css">
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Muli:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i' rel='stylesheet' type='text/css'>
+
+    <!-- Core CSS -->
+    <link href="vendor/base.css" class="theme-settings-appwork-css">
+    <link href="vendor/theme.css" class="theme-settings-theme-css">
+    <link href="vendor/colors.css" class="theme-settings-colors-css">
+    <link href="vendor/uikit.css" rel="stylesheet">
 
     <!-- Plugin CSS -->
     <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+    <link href="vendor/libs/swiper/swiper.css" rel="stylesheet">
+    <link href="vendor/libs/plyr/plyr.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <!--<link href="css/creative.min.css" rel="stylesheet">-->
-    <link href="{{ url(toCSS('scss/creative.scss')) }}" rel="stylesheet">
+
+    <!-- Everpay styles for this site-->
+    <!--<link href="css/everpay.min.css" rel="stylesheet">-->
+    <link href="{{ url(toCSS('scss/everpay.scss')) }}" rel="stylesheet">
+
+      <script src="vendor/js/material-ripple.js"></script>
+      <script src="vendor/js/layout-helpers.js"></script>
+
+      <!-- Theme settings -->
+      <!-- This file MUST be included after core stylesheets and layout-helpers.js in the <head> section -->
+      <script src="vendor/js/theme-settings.js"></script>
+      <script>
+        window.themeSettings = new ThemeSettings({
+          cssPath: 'vendor/css/rtl/',
+          themesPath: 'vendor/css/rtl/'
+        });
+      </script>
+
+      <!-- Core scripts -->
+      <script src="vendor/js/pace.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
   </head>
 
   <body id="page-top">
 
+  <div class="page-loader">
+    <div class="bg-success"></div>
+  </div>
+
     <!-- Navigation -->
+    <nav class="landing-navbar navbar navbar-expand-lg navbar-light fixed-top pt-lg-4" id="mainNav">
+        <div class="container-fluid px-3">
+          <a href="#" class="navbar-brand text-big font-weight-bolder line-height-1 text-expanded py-3">EverPay</a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#landing-navbar-collapse">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="landing-navbar-collapse">
+            <div class="navbar-nav align-items-lg-center ml-lg-4">
+              <a class="anchor-link nav-item nav-link js-scroll-trigger" href="#features">Features</a>
+              <a class="anchor-link nav-item nav-link js-scroll-trigger" href="#screenshots">Screenshots</a>
+              <a class="anchor-link nav-item nav-link js-scroll-trigger" href="#pricing">Pricing</a>
+              <a class="anchor-link nav-item nav-link js-scroll-trigger" href="#subscribe">Subscribe</a>
+            </div>
+            <div class="navbar-nav align-items-lg-center ml-auto">
+              <div class="nav-item py-2 py-lg-0 ml-lg-4">
+                <a href="#" class="btn btn-default btn-round">Sign In</a>
+              </div>
+              <div class="nav-item py-2 py-lg-0 ml-lg-2">
+                <a href="#" class="btn btn-primary btn-round">Sign Up</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
       <div class="container">
         <a class="navbar-brand js-scroll-trigger" href="#page-top">Start Bootstrap</a>
@@ -55,22 +116,158 @@
       </div>
     </nav>
 
-    <header class="masthead text-center text-white d-flex">
-      <div class="container my-auto">
-        <div class="row">
-          <div class="col-lg-10 mx-auto">
-            <h1 class="text-uppercase">
-              <strong>Your Favorite Source of Free Bootstrap Themes</strong>
-            </h1>
-            <hr>
+    <div class="swiper-container" id="landing-slider-parallax">
+        <!-- Parallax background element -->
+        <div class="landing-slider-parallax-bg" style="background-image:url(img/pages/landing-1-bg.png)" data-swiper-parallax="-23%"></div>
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide jumbotron ui-hero ui-mh-100vh bg-transparent overflow-hidden">
+            <div class="container-fluid justify-content-center px-lg-5">
+              <div class="row justify-content-center w-100 pt-3">
+
+                <div class="col-lg-7 col-xl-6 text-lg-left text-center my-5" data-swiper-parallax="-50%">
+                  <h1 class="display-3 font-secondary font-weight-semibold mb-4">
+                    Open Payments for Everyone
+                  </h1>
+                  <p class="lead text-muted pb-3">
+                    No more manual data logging, maintaining tracking plans, custom ETL pipelines, or one-off report requests. Just insights.
+                  </p>
+                  <div class="mt-2">
+                    <button type="button" class="landing-btn btn btn-lg btn-round btn-primary js-scroll-trigger">GET STARTED</button>
+                  </div>
+                </div>
+
+                <div class="col-lg-5 text-center pl-lg-5" data-swiper-parallax="100%" data-swiper-parallax-opacity="0">
+                  <div class="ui-presentation-right ui-device macbook float-left rounded">
+                    <img class="device-img" src="img/devices/macbook-gold.png" alt>
+                    <div class="device-content">
+                      <img src="img/uikit/app.png" alt>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
           </div>
-          <div class="col-lg-8 mx-auto">
-            <p class="text-faded mb-5">Start Bootstrap can help you build better websites using the Bootstrap CSS framework! Just download your template and start going, no strings attached!</p>
-            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a>
+
+          <div class="swiper-slide jumbotron ui-hero bg-transparent py-0 m-0">
+            <div class="d-flex flex-column w-100 ui-mh-100vh">
+
+              <div class="container d-flex justify-content-center align-items-center flex-grow-1">
+                <div class="row flex-basis-100 pt-5 mt-4 mt-sm-5">
+
+                  <div class="col-lg-8 text-center py-5 mx-auto">
+                    <h1 class="display-3 font-secondary font-weight-semibold mb-4" data-swiper-parallax-y="100">
+                      Manage All of Your Stuff with Single App
+                    </h1>
+                    <p class="lead text-muted pb-3" data-swiper-parallax-y="0">
+                      Lorem ipsum dolor sit amet, ius virtute suscipit te. Ius prima euismod consequat eu, cu quo alii scriptorem. Oratio aperiam per et, per euismod nominati forensibus cu.
+                    </p>
+                    <div class="mt-2" data-swiper-parallax-y="-100">
+                      <button type="button" class="landing-btn btn btn-lg btn-round btn-primary js-scroll-trigger">GET STARTED</button>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="flex-grow-0 mx-3">
+                <div class="ui-window w-100 rounded-top mx-auto" style="max-width:800px;max-height:250px;" data-swiper-parallax="0" data-swiper-parallax-opacity="0" data-swiper-parallax-duration="1500">
+                  <div class="window-content">
+                    <img src="img/uikit/app.png" alt>
+                  </div>
+                </div>
+              </div>
+
+            </div>
           </div>
+
+          <div class="swiper-slide jumbotron ui-hero ui-mh-100vh bg-transparent">
+            <div class="container-fluid justify-content-center px-lg-5">
+              <div class="row justify-content-center w-100 pt-3">
+
+                <div class="col-lg-4 text-center my-5 my-sm-0" data-swiper-parallax="200" data-swiper-parallax-opacity="0">
+                  <div class="ui-device iphone mw-100 mx-auto" style="width: 230px;">
+                    <div class="device-content">
+                      <img src="img/uikit/app-phone.png" alt>
+                    </div>
+                    <img class="device-img" src="img/devices/iphone.png" alt>
+                  </div>
+                </div>
+
+                <div class="col-lg-7 col-xl-6 text-lg-left text-center mx-xl-5" data-swiper-parallax="-100">
+                  <h1 class="display-3 font-secondary font-weight-semibold mb-4">
+                    A Lot of Features, Unlimited Platforms
+                  </h1>
+                  <p class="lead text-muted pb-3">
+                    Lorem ipsum dolor sit amet, ius virtute suscipit te. Ius prima euismod consequat eu, cu quo alii scriptorem. Oratio aperiam per et, per euismod nominati forensibus cu.
+                  </p>
+                  <div class="mt-2">
+                    <button type="button" class="landing-btn btn btn-lg btn-round btn-primary js-scroll-trigger">GET STARTED</button>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div id="landing-slider-next" class="swiper-button-next custom-icon">
+          <i class="lnr lnr-chevron-right text-primary"></i>
+        </div>
+        <div id="landing-slider-prev" class="swiper-button-prev custom-icon">
+          <i class="lnr lnr-chevron-left text-primary"></i>
         </div>
       </div>
-    </header>
+
+      <div class="bg-white">
+
+        <div class="landing-block pb-5">
+              <div class="container px-3">
+
+                <div class="col-md-10 col-lg-8 col-xl-7 text-center p-0 mx-auto">
+                  <div class="display-3 text-primary mb-4">
+                    <i class="lnr lnr-rocket"></i>
+                  </div>
+                  <h1 class="display-4 font-secondary font-weight-semibold mb-5">
+                    Ultimate Tool for Professionals
+                  </h1>
+                  <div class="text-muted">
+                    Lorem ipsum dolor sit amet, ad eam consul vituperata. Cum assum inimicus an, his ne liber aeterno debitis. Te his iudico tollit efficiendi. Eu harum volumus pri, oporteat probatus disputationi id his. Mei in vidit mollis mediocrem, cum ad suas democritum,
+                    ea eos e ligendi nominati volutpat.
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <!-- / Block -->
+
+            <div class="landing-separator-stripes my-4"></div>
+
+            <!-- Block -->
+            <div class="landing-block pt-5">
+              <div class="container px-3">
+                <div class="row justify-content-between align-items-center">
+
+                  <div class="col-lg-5 col-xl-4 text-lg-left text-center mx-auto">
+                    <div class="text-lighter text-tiny font-weight-bold mb-3">INTRODUCING</div>
+                    <h1 class="display-4 font-secondary font-weight-semibold mb-4">Unlimited Possibilities</h1>
+                    <p class="text-muted">
+                      Lorem ipsum dolor sit amet, ad eam consul vituperata. Cum assum inimicus an, his ne liber aeterno debitis. Te his iudico tollit efficiendi.
+                    </p>
+                  </div>
+
+                  <div class="col-lg-7 col-xl-7 mt-5 mt-lg-0">
+                    <div id="landing-video" data-type="youtube" data-video-id="bTqVqk7FSmY" class="w-100"></div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <!-- / Block -->
+
+          </div>
+
 
     <section class="bg-primary" id="about">
       <div class="container">
@@ -255,18 +452,65 @@
         </div>
       </div>
     </section>
+</div>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Footer -->
+  <nav class="footer bg-black pt-4">
+    <div class="container text-center py-4">
+      <div class="pb-3">
+        <a href="#" class="footer-text text-big font-weight-bolder text-expanded">LANDING</a>
+        <span class="align-top">©</span>
+      </div>
+      <hr class="mb-4">
+      <div class="row">
+        <div class="col-6 col-sm pb-4">
+          <div class="footer-text font-secondary text-tiny font-weight-bold mb-3">ABOUT US</div>
+          <a href="#" class="footer-link d-block small pb-2">About</a>
+          <a href="#" class="footer-link d-block small pb-2">Our Story</a>
+          <a href="#" class="footer-link d-block small pb-2">Careers</a>
+        </div>
+        <div class="col-6 col-sm pb-4">
+          <div class="footer-text font-secondary text-tiny font-weight-bold mb-3">SUPPORT</div>
+          <a href="#" class="footer-link d-block small pb-2">FAQ</a>
+          <a href="#" class="footer-link d-block small pb-2">Support</a>
+          <a href="#" class="footer-link d-block small pb-2">Consultant</a>
+        </div>
+        <div class="col-6 col-sm pb-4">
+          <div class="footer-text font-secondary text-tiny font-weight-bold mb-3">PARTNERS</div>
+          <a href="#" class="footer-link d-block small pb-2">Wholesale</a>
+          <a href="#" class="footer-link d-block small pb-2">Office solutions</a>
+          <a href="#" class="footer-link d-block small pb-2">Press Resource</a>
+        </div>
+        <div class="col-6 col-sm pb-4">
+          <div class="footer-text font-secondary text-tiny font-weight-bold mb-3">CONNECT</div>
+          <a href="#" class="footer-link d-block small pb-2">
+          <i class="ion ion-logo-twitter text-twitter"></i> &nbsp;Twitter</a>
+          <a href="#" class="footer-link d-block small pb-2">
+          <i class="ion ion-logo-facebook text-facebook"></i> &nbsp;Facebook</a>
+          <a href="#" class="footer-link d-block small pb-2">
+          <i class="ion ion-logo-instagram text-instagram"></i> &nbsp;Instagram</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- / Footer -->
+      <!-- Core scripts -->
+      <script src="vendor/libs/popper/popper.js"></script>
+      <script src="js/bootstrap.js"></script>
+
+      <!-- Libs -->
+      <script src="vendor/libs/swiper/swiper.js"></script>
+      <script src="vendor/libs/plyr/plyr.js"></script>
 
     <!-- Plugin JavaScript -->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
     <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
     <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
 
-    <!-- Custom scripts for this template -->
-    <script src="js/creative.min.js"></script>
+    <!-- Custom scripts -->
+    <script src="js/everpay.js"></script>
+    <script src="js/everpay.min.js"></script>
 
   </body>
 
